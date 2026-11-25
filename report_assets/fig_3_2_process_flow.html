@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #ffffff; margin: 0; padding: 25px; display: flex; justify-content: center; }
+  .canvas { width: 680px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 30px; box-sizing: border-box; }
+  .title { font-size: 20px; font-weight: 700; color: #12304A; text-align: center; margin-bottom: 25px; }
+  .flow { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .node { width: 440px; background: #f0fdfa; border: 1.5px solid #0F9D91; border-radius: 10px; padding: 10px 16px; text-align: center; font-size: 13px; font-weight: 600; color: #0f766e; }
+  .node-blue { background: #eff6ff; border-color: #3b82f6; color: #1d4ed8; }
+  .node-purple { background: #faf5ff; border-color: #a855f7; color: #7e22ce; }
+  .node-amber { background: #fffbeb; border-color: #f59e0b; color: #b45309; }
+  .node-green { background: #f0fdf4; border-color: #22c55e; color: #15803d; }
+  .arrow { color: #64748b; font-size: 14px; font-weight: bold; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="title">MediAccess End-to-End 3-Phase Process Flow</div>
+  <div class="flow">
+    <div class="node">User Authentication & Profile Setup (Phase 1)</div>
+    <div class="arrow">▼</div>
+    <div class="node">Medicine Strip Scanning (Tesseract.js OCR) or Search</div>
+    <div class="arrow">▼</div>
+    <div class="node">Medicine Identification & Verification (Confidence Score %)</div>
+    <div class="arrow">▼</div>
+    <div class="node node-blue">Locate Nearby Pharmacies (Haversine Distance & Stock)</div>
+    <div class="arrow">▼</div>
+    <div class="node node-blue">Fulfillment Selection: Reserve & Collect vs Home Delivery</div>
+    <div class="arrow">▼</div>
+    <div class="node node-purple">Phase 2: Pharmacy Receives Order & Updates Inventory</div>
+    <div class="arrow">▼</div>
+    <div class="node node-purple">Pharmacy Packages Order & Marks "Ready for Delivery"</div>
+    <div class="arrow">▼</div>
+    <div class="node node-amber">Phase 3: Delivery Driver Claims Job & Confirms Pickup</div>
+    <div class="arrow">▼</div>
+    <div class="node node-green">Live Doorstep Handover & 5-Stage Customer Tracking Verified</div>
+  </div>
+</div>
+</body>
+</html>

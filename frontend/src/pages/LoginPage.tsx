@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Pill, Mail, Lock, AlertCircle, ArrowRight, KeyRound, Sparkles } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
@@ -11,6 +11,17 @@ export const LoginPage: React.FC = () => {
   const [password, setPassword] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const autoEmail = params.get('autologin');
+    const redirectUrl = params.get('redirect');
+    if (autoEmail) {
+      handleQuickLogin(autoEmail).then(() => {
+        if (redirectUrl) navigate(redirectUrl);
+      });
+    }
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

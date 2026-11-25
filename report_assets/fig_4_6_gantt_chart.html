@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #ffffff; margin: 0; padding: 25px; display: flex; justify-content: center; }
+  .canvas { width: 920px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 30px; box-sizing: border-box; }
+  .title { font-size: 20px; font-weight: 700; color: #12304A; text-align: center; margin-bottom: 25px; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th, td { border: 1px solid #cbd5e1; padding: 8px 10px; text-align: left; }
+  th { background: #f1f5f9; color: #1e293b; font-weight: 700; }
+  .bar { height: 16px; border-radius: 4px; background: #0F9D91; }
+  .bar-blue { background: #3b82f6; }
+  .bar-amber { background: #f59e0b; }
+  .bar-purple { background: #8b5cf6; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="title">Project Schedule (12-Week Agile Sprint Timeline)</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 260px;">Project Activity / Milestone</th>
+        <th>W1</th><th>W2</th><th>W3</th><th>W4</th><th>W5</th><th>W6</th><th>W7</th><th>W8</th><th>W9</th><th>W10</th><th>W11</th><th>W12</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Problem Definition & Healthcare Literature Survey</td><td colspan="2"><div class="bar"></div></td><td colspan="10"></td></tr>
+      <tr><td>Requirements Specification & ISO 25010 Quality Model</td><td></td><td colspan="2"><div class="bar"></div></td><td colspan="9"></td></tr>
+      <tr><td>Database Architecture & SQLite Schema Design</td><td colspan="2"></td><td colspan="2"><div class="bar"></div></td><td colspan="8"></td></tr>
+      <tr><td>FastAPI Backend Development & REST APIs</td><td colspan="3"></td><td colspan="3"><div class="bar bar-blue"></div></td><td colspan="6"></td></tr>
+      <tr><td>React UI Development & Tailwind Styling</td><td colspan="4"></td><td colspan="3"><div class="bar bar-blue"></div></td><td colspan="5"></td></tr>
+      <tr><td>Tesseract.js OCR Strip Scanning Implementation</td><td colspan="5"></td><td colspan="3"><div class="bar bar-amber"></div></td><td colspan="4"></td></tr>
+      <tr><td>Phase 2: Pharmacy Store Dashboard Integration</td><td colspan="6"></td><td colspan="2"><div class="bar bar-amber"></div></td><td colspan="4"></td></tr>
+      <tr><td>Phase 3: Delivery Fleet Partner Marketplace</td><td colspan="7"></td><td colspan="2"><div class="bar bar-purple"></div></td><td colspan="3"></td></tr>
+      <tr><td>Direct Integration Test Suite & Bug Fixing</td><td colspan="8"></td><td colspan="2"><div class="bar bar-purple"></div></td><td colspan="2"></td></tr>
+      <tr><td>GitHub Version Control & Final Documentation</td><td colspan="10"></td><td colspan="2"><div class="bar"></div></td></tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

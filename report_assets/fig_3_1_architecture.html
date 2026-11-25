@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #ffffff; margin: 0; padding: 25px; display: flex; justify-content: center; }
+  .canvas { width: 950px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 30px; box-sizing: border-box; }
+  .title { font-size: 20px; font-weight: 700; color: #12304A; text-align: center; margin-bottom: 25px; }
+  .grid { display: grid; grid-template-columns: 280px 380px 220px; gap: 20px; }
+  .col { display: flex; flex-direction: column; gap: 15px; }
+  .col-header { font-size: 15px; font-weight: 700; color: #0F9D91; text-align: center; padding-bottom: 8px; border-bottom: 2px solid #0F9D91; }
+  .card { background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 10px; padding: 14px 16px; text-align: center; font-size: 13px; font-weight: 600; color: #1e293b; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .card-client { border-color: #0F9D91; background: #f0fdfa; color: #0d9488; }
+  .card-server { border-color: #3b82f6; background: #eff6ff; color: #1d4ed8; }
+  .card-ext { border-color: #64748b; background: #f1f5f9; color: #334155; }
+  .card small { display: block; font-size: 11px; font-weight: normal; color: #64748b; margin-top: 4px; }
+  .arrow { text-align: center; font-size: 18px; color: #94a3b8; margin: -5px 0; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="title">MediAccess Full-Stack System Architecture</div>
+  <div class="grid">
+    <div class="col">
+      <div class="col-header">Mobile / Web Client (React 19)</div>
+      <div class="card card-client">1. Strip Scanner UI<small>Camera capture, Canvas preprocessor</small></div>
+      <div class="card card-client">2. Medicine Search & Catalog<small>26 medicines, category filters</small></div>
+      <div class="card card-client">3. Pharmacy Locator & Map<small>Haversine distance calculation</small></div>
+      <div class="card card-client">4. Cart & Order Tracking<small>5-stage visual delivery tracker</small></div>
+      <div class="card card-client">5. Pharmacy & Courier Portals<small>Inventory updates & job marketplace</small></div>
+    </div>
+    <div class="col">
+      <div class="col-header">Application Server (FastAPI / Python)</div>
+      <div class="card card-server">OCR Text Recognition Engine<small>Tesseract.js client worker + regex rules</small></div>
+      <div class="card card-server">Medicine Normalizer & Fuzzy Matcher<small>Tokenized catalog matching & confidence scoring</small></div>
+      <div class="card card-server">Inventory & Pharmacy Service<small>Multi-tenant stock & price management</small></div>
+      <div class="card card-server">Reservation & Order Engine<small>Pickup booking, stock decrement, cancellation</small></div>
+      <div class="card card-server">Delivery Dispatch & Earnings Ledger<small>Atomic job claiming, GPS status advancement</small></div>
+    </div>
+    <div class="col">
+      <div class="col-header">Data & External Services</div>
+      <div class="card card-ext">SQLite Database<small>mediaccess.db (Persistent storage)</small></div>
+      <div class="card card-ext">Firebase Web SDK<small>Project: medical-access-1f08e</small></div>
+      <div class="card card-ext">Browser Geolocation API<small>W3C GPS latitude / longitude</small></div>
+      <div class="card card-ext">GitHub Remote Repo<small>durga1610/medical-app.git</small></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
