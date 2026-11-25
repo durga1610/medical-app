@@ -1,0 +1,11 @@
+{
+  "name": "mediaccess-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "chrome": "start chrome http://localhost:5173",
+    "dev": "cd frontend && npm run dev",
+    "start": "cmd /c start_all.bat",
+    "test": ".\\venv\\Scripts\\python backend/test_routes_direct.py"
+  }
+}
